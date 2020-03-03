@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('thisdotNgupgrade')
+    .module('thisDotNgUpgrade')
     .config(config);
 
   /** @ngInject */

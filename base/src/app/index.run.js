@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('thisdotNgupgrade')
+    .module('thisDotNgUpgrade')
     .run(runBlock);
 
   /** @ngInject */

@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('thisdotNgupgrade')
+    .module('thisDotNgUpgrade')
     .constant('moment', moment);
 
 })();

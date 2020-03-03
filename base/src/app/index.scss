@@ -22,6 +22,51 @@ $icon-font-path: "../../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
   }
 }
 
+.page-title {
+  font-size: 36px;
+}
+
+shows .show__inner {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+shows .show {
+  &:not(:last-child) {
+    &:after {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      content: '';
+      display: block;
+      width: 30%;
+      height: 1px;
+      border-bottom: 1px solid #CECECE;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+shows .show__image {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+
+shows .show__name {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+shows .show__description {
+  display: block;
+  margin-bottom: 16px;
+}
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

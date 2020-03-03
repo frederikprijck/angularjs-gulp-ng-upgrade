@@ -2,25 +2,21 @@
   'use strict';
 
   angular
-    .module('thisdotNgupgrade')
+    .module('thisDotNgUpgrade')
     .config(routeConfig);
 
   function routeConfig($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        redirectTo: '/all-shows'
       })
-      .when('/about', {
-        templateUrl: 'app/about/about.html',
-        controller: 'AboutController',
-        controllerAs: 'about'
+      .when('/all-shows', {
+        templateUrl: 'app/all-shows/all-shows.html',
+        controller: 'AllShowsController'
       })
-      .when('/contact', {
-        templateUrl: 'app/contact/contact.html',
-        controller: 'ContactController',
-        controllerAs: 'contact'
+      .when('/favorite-shows', {
+        templateUrl: 'app/favorite-shows/favorite-shows.html',
+        controller: 'FavoriteShowsController'
       })
       .otherwise({
         redirectTo: '/'

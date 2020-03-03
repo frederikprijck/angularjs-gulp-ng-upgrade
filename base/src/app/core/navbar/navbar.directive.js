@@ -2,14 +2,14 @@
   'use strict';
 
   angular
-    .module('thisdotNgupgrade')
-    .directive('acmeNavbar', acmeNavbar);
+    .module('thisDotNgUpgrade.core')
+    .directive('navbar', navbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function navbar() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/navbar/navbar.html',
+      templateUrl: 'app/core/navbar/navbar.html',
       scope: {
           creationDate: '='
       },

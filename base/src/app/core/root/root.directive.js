@@ -2,14 +2,14 @@
   'use strict';
 
   angular
-    .module('thisdotNgupgrade')
+    .module('thisDotNgUpgrade.core')
     .directive('root', root);
 
   /** @ngInject */
   function root() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/root/root.html',
+      templateUrl: 'app/core/root/root.html',
       controller: RootController,
       controllerAs: 'vm',
       bindToController: true
