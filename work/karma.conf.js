@@ -14,7 +14,6 @@ function listFiles() {
     'node_modules/angular-mocks/angular-mocks.js',
     'node_modules/angular-route/angular-route.js',
     'node_modules/angular-toastr/dist/angular-toastr.js',
-    'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
     'node_modules/jquery/dist/jquery.js'
   ].concat([
       path.join(conf.paths.src, '/app/**/*.module.js'),
