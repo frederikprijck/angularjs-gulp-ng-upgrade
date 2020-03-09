@@ -1,6 +1,9 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const port = 4201
+
+app.use(cors())
 
 let shows = [
   {
