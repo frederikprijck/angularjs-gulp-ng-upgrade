@@ -1,52 +1,34 @@
 (function() {
   'use strict';
 
-  /**
-   * @todo Complete the test
-   * This example is not perfect.
-   * Test should check if MomentJS have been called
-   */
   describe('directive navbar', function() {
-    // var $window;
     var vm;
     var el;
-    var timeInMs;
 
     beforeEach(module('thisDotNgUpgrade'));
-    beforeEach(inject(function($compile, $rootScope) {
-      // spyOn(_$window_, 'moment').and.callThrough();
-      // $window = _$window_;
+    beforeEach(inject(function($compile, $rootScope, $httpBackend) {
 
-      timeInMs = new Date();
-      timeInMs = timeInMs.setHours(timeInMs.getHours() - 24);
+      $httpBackend.whenGET(/\.html/).respond(200, '');
 
-      el = angular.element('<acme-navbar creation-date="timeInMs"></acme-navbar>');
+      el = angular.element('<navbar></navbar>');
       var scope = $rootScope.$new();
-      scope.timeInMs = timeInMs;
 
       $compile(el)(scope);
       $rootScope.$digest();
+      $httpBackend.flush();
+
       vm = el.isolateScope().vm;
-      // ctrl = el.controller('acmeNavbar');
     }));
 
     it('should be compiled', function() {
       expect(el.html()).not.toEqual(null);
     });
 
-    it('should have isolate scope object with instanciate members', function() {
+    xit('should have navItems set', function() {
       expect(vm).toEqual(jasmine.any(Object));
 
-      expect(vm.creationDate).toEqual(jasmine.any(Number));
-      expect(vm.creationDate).toEqual(timeInMs);
-
-      expect(vm.relativeDate).toEqual(jasmine.any(String));
-      expect(vm.relativeDate).toEqual('a day ago');
+      expect(vm.navItems).toEqual(jasmine.any(Array));
+      expect(vm.navItems.length).toEqual(2);
     });
-
-    // it('should call Moment', function() {
-    //   console.log($window.moment)
-    //   expect($window.moment).toHaveBeenCalled();
-    // });
   });
 })();

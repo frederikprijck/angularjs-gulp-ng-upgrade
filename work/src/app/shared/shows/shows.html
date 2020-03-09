@@ -8,19 +8,19 @@
     <div>
       <button
         ng-if="!show.isFavorite"
-        ng-click="onFavorite(show)"
+        ng-click="favoriteShow(show)"
         class="btn btn-primary"
       >
         FAVORITE
       </button>
       <button
         ng-if="show.isFavorite"
-        ng-click="onUnfavorite(show)"
+        ng-click="unfavoriteShow(show)"
         class="btn btn-primary"
       >
         UNFAVORITE
       </button>
-      <button ng-click="onRemove(show)" class="btn btn-danger">
+      <button ng-click="removeShow(show)" class="btn btn-danger">
         REMOVE
       </button>
     </div>

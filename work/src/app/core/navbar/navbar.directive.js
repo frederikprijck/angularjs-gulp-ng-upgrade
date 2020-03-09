@@ -10,9 +10,7 @@
     var directive = {
       restrict: 'E',
       templateUrl: 'app/core/navbar/navbar.html',
-      scope: {
-          creationDate: '='
-      },
+      scope: {},
       controller: NavbarController,
       controllerAs: 'vm',
       bindToController: true
@@ -21,12 +19,13 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment) {
+    function NavbarController() {
       var vm = this;
 
-      this.$onInit = function () {
-        vm.relativeDate = moment(vm.creationDate).fromNow();
-      }
+      vm.navItems = [
+        { text: 'All Shows', url: '#/all-shows'},
+        { text: 'Favorite Shows', url: '#/favorite-shows'}
+      ]
     }
   }
 

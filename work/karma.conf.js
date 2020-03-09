@@ -12,17 +12,10 @@ function listFiles() {
   var patterns = [
     'node_modules/angular/angular.js',
     'node_modules/angular-mocks/angular-mocks.js',
-    'node_modules/angular-animate/angular-animate.js',
-    'node_modules/angular-aria/angular-aria.js',
-    'node_modules/angular-cookies/angular-cookies.js',
-    'node_modules/angular-messages/angular-messages.js',
     'node_modules/angular-route/angular-route.js',
-    'node_modules/angular-sanitize/angular-sanitize.js',
     'node_modules/angular-toastr/dist/angular-toastr.js',
-    'node_modules/angular-touch/angular-touch.js',
     'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
-    'node_modules/jquery/dist/jquery.js',
-    'node_modules/moment/moment.js'
+    'node_modules/jquery/dist/jquery.js'
   ].concat([
       path.join(conf.paths.src, '/app/**/*.module.js'),
       path.join(conf.paths.src, '/app/**/*.js'),
