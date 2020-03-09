@@ -1,0 +1,32 @@
+<div ng-repeat="show in shows" class="show">
+  <div class="show__inner">
+    <div>
+      <img ng-src="{{show.imgUrl}}" class="show__image" />
+      <span class="show__name">{{ show.name }}</span>
+      <span class="show__description">{{ show.description }}</span>
+    </div>
+    <div>
+      <button
+        ng-if="!show.isFavorite"
+        ng-click="onFavorite(show)"
+        class="btn btn-primary"
+      >
+        FAVORITE
+      </button>
+      <button
+        ng-if="show.isFavorite"
+        ng-click="onUnfavorite(show)"
+        class="btn btn-primary"
+      >
+        UNFAVORITE
+      </button>
+      <button ng-click="onRemove(show)" class="btn btn-danger">
+        REMOVE
+      </button>
+    </div>
+  </div>
+</div>
+
+<div ng-if="!shows.length">
+  No results
+</div>
