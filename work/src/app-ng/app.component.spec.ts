@@ -11,6 +11,13 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [
+        {
+          provide: '$compile',
+          useValue: () => () => {},
+        },
+        { provide: '$rootScope', useValue: {} },
+      ]
     }).compileComponents();
   }));
 
