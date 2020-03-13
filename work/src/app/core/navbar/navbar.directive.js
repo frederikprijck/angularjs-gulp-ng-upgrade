@@ -9,7 +9,7 @@
   function navbar() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/core/navbar/navbar.html',
+      template: require('src/app/core/navbar/navbar.html'),
       scope: {},
       controller: NavbarController,
       controllerAs: 'vm',

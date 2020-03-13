@@ -9,7 +9,7 @@
     function shows() {
       var directive = {
         restrict: 'E',
-        templateUrl: 'app/shared/shows/shows.html',
+        template: require('src/app/shared/shows/shows.html'),
         scope: {
             shows: '=',
             onFavorite: '&',

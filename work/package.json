@@ -8,6 +8,7 @@
     "@angular/platform-browser": "^9.0.4",
     "@angular/platform-browser-dynamic": "^9.0.4",
     "@angular/router": "^9.0.4",
+    "@angular/upgrade": "^9.0.6",
     "angular": "^1.7.9",
     "angular-mocks": "^1.7.9",
     "angular-route": "^1.7.9",
@@ -21,12 +22,12 @@
   },
   "scripts": {
     "serve": "gulp serve",
-    "serve:ng": "ng serve",
+    "serve:ng": "ng serve --extra-webpack-config webpack.partial.js --proxy-config proxy.conf.json",
     "serve:dist": "gulp serve:dist",
     "build": "gulp build",
-    "build:ng": "ng build",
+    "build:ng": "ng build --extra-webpack-config webpack.partial.js",
     "test": "gulp test",
-    "test:ng": "ng test"
+    "test:ng": "ng test --extra-webpack-config webpack.partial.js"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.4",
@@ -65,6 +66,7 @@
     "gulp-uglify": "~1.4.1",
     "gulp-useref": "~3.0.3",
     "gulp-util": "~3.0.6",
+    "html-loader": "^0.5.5",
     "http-proxy-middleware": "~0.9.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -79,6 +81,8 @@
     "karma-phantomjs-launcher": "~0.2.1",
     "karma-phantomjs-shim": "~1.2.0",
     "lodash": "~3.10.1",
+    "ng-annotate-loader": "^0.6.1",
+    "ngx-build-plus": "^9.0.6",
     "phantomjs": "~1.9.18",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",

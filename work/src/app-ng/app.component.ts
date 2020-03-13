@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'base-ng';
+  constructor(
+    private elementRef: ElementRef,
+    @Inject('$compile') private $compile,
+    @Inject('$rootScope') private $rootScope,
+  ) {}
+
+  ngOnInit() {
+    this.$compile(this.elementRef.nativeElement.querySelector('[ng-view]'))(this.$rootScope);
+  }
 }

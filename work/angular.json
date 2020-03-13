@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/app-ng",
             "index": "src/index-ng.html",
@@ -28,9 +28,16 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/animate.css/animate.css",
+              "node_modules/angular-toastr/dist/angular-toastr.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/angular/angular.js",
+              "node_modules/angular-route/angular-route.js",
+              "node_modules/angular-toastr/dist/angular-toastr.tpls.js",
+              "node_modules/jquery/dist/jquery.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -64,7 +71,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "base-ng:build"
           },
@@ -81,7 +88,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
@@ -123,6 +130,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "base-ng"
 }
