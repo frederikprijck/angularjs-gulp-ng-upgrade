@@ -10,7 +10,6 @@ import './app/shared/shows/shows.directive.js';
 import './app/core/core.module.js';
 import './app/core/navbar/navbar.directive.js';
 import './app/index.module.js';
-import './app/favorite-shows/favorite-shows.controller.js';
 import './app/all-shows/all-shows.controller.js';
 import './app/index.run.js';
 import './app/index.route.js';

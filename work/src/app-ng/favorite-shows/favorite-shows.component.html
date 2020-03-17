@@ -1,0 +1,6 @@
+<h1 class="page-title">Favorite Shows</h1>
+<shows
+  [shows]="shows"
+  (onUnfavorite)="unfavoriteShow($event.id)"
+  (onRemove)="removeShow($event.id)"
+></shows>
