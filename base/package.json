@@ -17,7 +17,7 @@
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.4.1",
     "jquery": "^2.2.4",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "scripts": {
     "serve": "gulp serve",
