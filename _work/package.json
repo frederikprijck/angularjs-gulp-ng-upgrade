@@ -11,7 +11,7 @@
     "@angular/platform-browser-dynamic": "^9.0.4",
     "@angular/router": "^9.0.4",
     "@angular/upgrade": "^9.0.4",
-    "angular": "^1.7.9",
+    "angular": "^1.8.3",
     "angular-animate": "^1.7.9",
     "angular-aria": "^1.7.9",
     "angular-cookies": "^1.7.9",
